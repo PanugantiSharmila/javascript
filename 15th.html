@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM set/get attributes</title>
+</head>
+<body>
+    <a id="url" class="alert alert-danger" href="https://www.google.com">Google</a>
+    <button onclick="getAtt()">Get</button>
+    <button onclick="setAtt()">Set</button>
+    <button onclick="rem()">Remove</button>
+    <script>
+        const getAtt=()=>{
+            let url=document.getElementById('url')
+            let h=url.getAttribute('href')
+            console.log(h)
+            console.log(url.getAttribute('class'))
+        }
+        const setAtt=()=>{
+            let url=document.getElementById('url')
+            url.setAttribute('href','https://w3schools.com')
+            url.innerHTML='W3Schools'
+        }
+        //remove
+        const rem=()=>{
+            let url=document.getElementById('url').removeAttribute('class')
+        }
+    </script>
+</body>
+</html>

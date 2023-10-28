@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <script>
+        function sayHello()
+        {
+            console.log("Hello")
+        }
+        sayHello()
+        function doSum(a,b)
+        {
+let c=a+b;
+return c;
+        }
+        let sum=doSum(2,4)
+        let sum2=doSum(4)
+        console.log(sum)
+        console.log(sum2)
+        function toCelsius(f){
+            let res=5/9*(f-32)
+            return res
+        }
+        console.log(toCelsius(102))
+        const toCelsiusV=(f)=>{
+            let res=5/9*(f-32)
+            return res
+        }
+        console.log(toCelsiusV(108))
+    </script>
+</body>
+</html>

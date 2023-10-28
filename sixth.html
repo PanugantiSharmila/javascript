@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String operations</title>
+</head>
+<body>
+    <script>
+        let str1="JS"
+        let str2="JS"
+        console.log(str1==str2)
+        console.log(str1)
+        if(str1==str2)
+        {
+            console.log("They are equal")
+        }
+
+        let str3=new String("JS")
+        let str4=new String("JS")
+        if(str3==str4)
+        {
+            console.log("equal")
+        } 
+        else{
+            console.log("Not equal")
+        }
+
+        //Comapring Strings
+        let s1='Be',s2='Ba'
+        let res=s1.localeCompare(s2)
+        console.log(res)
+        //Replace
+        let old="JS programming"
+        let newS=old.replace("JS","Java Script")
+        console.log(old)
+        console.log(newS)
+
+        //Accessing
+        console.log(old.charAt(4))
+        console.log(old[9])
+        let arr=old.split("")
+        console.log(arr)
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Conversions</title>
+</head>
+<body>
+    <script>
+        let a=12
+        console.log(typeof a)
+        //String conversion
+        let s=String(a)
+        console.log(typeof s)
+        console.log(s.length)
+        console.log(a.toString().length)
+        console.log(typeof (String(false)))
+        
+        //Numeric conversion
+        let val="24"
+        console.log(val+5)
+
+        let val2=Number(val)
+        console.log(val2+7)
+
+        //parseInt/Float
+        let p=parseInt(val)
+        console.log(p+12)
+        let pf=parseFloat("90.54")
+        console.log(pf+9)
+
+        //null=0;false=0;true=1
+        console.log(Number(true))
+        console.log(Number(null))
+        console.log(Number(false))
+
+        //Boolean conversion
+        let e=0
+        console.log(typeof e)
+        let be=Boolean(e)
+        console.log(be,typeof be)
+
+    </script>
+</body>
+</html>

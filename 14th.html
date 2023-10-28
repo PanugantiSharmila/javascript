@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM styling</title>
+    <style>
+        .red{
+            background-color: cornflowerblue;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="changeStyle()"> ChangeStyle</button>
+    <button onclick="getStyle()">GetStyle</button>
+    <h2 id="main">1.Heading</h2>
+    <h2 id="sub">2.Heading</h2>
+    <h2 id="subsub">3.heading</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa obcaecati repellat officiis commodi, deserunt eveniet aspernatur non, blanditiis assumenda nesciunt, autem delectus ea? Repellendus temporibus reiciendis quasi nostrum ut numquam sequi ipsam amet dolorum facilis! Delectus, expedita dolore excepturi ea sint laboriosam omnis totam nostrum deserunt aliquid dolores tempore laborum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id eos quos autem voluptatibus soluta perspiciatis nam delectus quod quia labore dolore ratione doloremque repellat mollitia ut tempora, aperiam quisquam fugit!</p>
+    <script>
+let main=document.getElementById('main')
+// main.style.color='rgb(400,30,0,0.3)'
+// main.style.fontSize='30px'
+// main.style.border='2px solid red'
+// main.style.padding='20px'
+const changeStyle=()=>{
+    
+main.style.color='gray'
+main.style.fontSize='30px'
+main.style.border='2px solid darkblue'
+main.style.padding='20px'
+document.body.style.background='rgb(80,50,0,0.5)'
+main.className='red'
+
+}
+const getStyle=()=>{
+    let styles=window.getComputedStyle(main)
+    console.log(styles.getPropertyValue('color'))
+}
+
+    </script>
+</body>
+</html>

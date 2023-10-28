@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <h1>Object Operations</h1>
+    <script>
+        const ob={
+            name:'ABC',
+            phone:'2345123',
+            address:'HYD',
+            age:23
+        }
+        console.log(ob);
+        console.log(ob.name)
+        const ob2={
+            name:'ABC',
+            phone:'2345123',
+            address:'HYD',
+            age:23,
+            //lastName:'XYZ',
+            //last_Name:'XYZ'
+            "last Name":'XYZ'
+        }
+        console.log(ob2)
+        console.log(ob2['last Name'])
+        //Functions in objects
+        const ob3={
+            name:'ABC',
+            phone:'2345123',
+            address:'HYD',
+            age:23,
+            display:function()
+            {
+                console.log(this.name," ",this.age)
+            }
+        }
+        ob3.display()
+        ob3['display']() //calling function
+        //For in loop
+        for(let key in ob3)
+        {
+            console.log(`${key}  : ${ob3[key]}` )
+        }
+        //Change property values
+        ob3.address="Banglore"
+        
+        console.log(ob3.address)
+        //dynamically adding properties
+        ob3.email='KAnereso@gmail.com'
+        console.log(ob3)
+        //delete properties
+        delete ob3['last Name']
+        console.log(ob3)
+    </script>
+</body>
+</html>

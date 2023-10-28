@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String handling Functions</title>
+</head>
+<body>
+    <script>
+        let s='Hello I am Sharmila'
+        console.log(s)
+        let len=s.length
+        console.log('Length : ',len)
+        let con=' Panuganti'
+        console.log(s.concat(con))
+        //CharAt
+        console.log(s)
+        console.log("Char at 6 pos",s.charAt(6))
+        //index
+        console.log("Index of s",s.indexOf('Sharmi'))
+        console.log("last index",s.lastIndexOf('i'))
+        console.log("Substring",s.substring(10,19))
+        //toUpperCase,toLowerCase
+        console.log("starts with",s.startsWith("He"))
+        console.log("Ends with",s.endsWith('i'))
+        let sp=s.split(' ')
+        console.log(sp)
+        let s2="        XYZ        "
+        let st=s2.trim();
+        console.log("Trimmed string ",st)
+        console.log(s2)
+    </script>
+</body>
+</html>

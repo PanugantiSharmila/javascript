@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS arrays</title>
+</head>
+<body>
+    <script>
+        let arr=[1,2,3,4,5]
+        console.log(arr)
+        console.log(arr[3])
+        //Constructor
+        let arr2=new Array('a','b','vi')
+        console.log(arr2)
+        arr2.push('xyz')
+        console.log(arr2)
+        console.log(arr2.pop())
+        console.log(arr2)
+        arr2.push('new')
+        console.log(arr2)
+        console.log("Length ",arr2.length)
+        //type is not fixed
+        arr2.push(123.45)
+        arr2.push([12,13])
+        console.log(arr2)
+        console.log(arr2[5][0])
+    </script>
+</body>
+</html>

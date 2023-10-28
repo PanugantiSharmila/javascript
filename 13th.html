@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM selectors</title>
+</head>
+<body>
+    <h1>DOM selectors</h1>
+    <h2 id="banner">Center for Good Governance</h2>
+    <h1 class="myclass">Hello world</h1>
+    <h1 class="myclass">Hello world</h1>
+    <h1 class="myclass">Hello world</h1>
+    <h1 class="myclass">Hello world</h1>
+
+    <script>
+        let ht=document.documentElement
+        console.log(ht)
+        let he=document.head
+        console.log(he)
+        let hti=document.title
+        console.log(hti)
+        //Accessing elements by id
+        let el=document.getElementById('banner')
+        console.log(el)
+        console.log(el.innerHTML)
+        el.innerHTML='CGG'
+        console.log(el.innerHTML)
+        el.style.color='gray'
+        el.style.background='rgb(123,125,0,0.2)'
+        //by classname
+        let ele=document.getElementsByClassName('myclass')
+        for(element of ele){
+            element.style.color='rgb(5,0,0,0.7)'
+        element.style.background='rgb(100,100,0,0.4)'
+        }
+        //selecting elements  by tagname
+
+        //selecting elements with CSS selectors
+        //querySelector()-single element
+        //qyerySelecetorAll()-list of elements
+        // let els=document.querySelector('.myclass')
+        // console.log(els)
+        let els=document.querySelectorAll('.myclass')
+        console.log(els)
+        for(let e of els)
+        {
+            console.log(e)
+            e.style.color='rgb(78,65,0,0.7)'
+        }
+    </script>
+</body>
+</html>

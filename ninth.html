@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS array operarions</title>
+</head>
+<body>
+    <script>
+        //loops on array foreach
+        let arr=[1,2,3,4,5]
+        // arr.forEach(element => {
+        //     console.log(element)
+        // });
+        arr.forEach(function(item,index){
+            console.log(`${index} -> ${item}`)
+        })
+        let sum=0
+      arr.forEach(function(item,index){
+            sum=sum+item
+        })
+        arr.map((value,index)=>{
+            console.log(`${index} -> ${value}`)
+        })
+        console.log(sum)
+        let val=arr.shift() //removes from beginning
+        console.log(val)
+        console.log(arr)
+        arr.unshift("first")
+        console.log(arr)
+        arr.splice(0,1) //removing from index,no.of elements
+        console.log(arr)
+        //Copy array
+        arr.push([1,2,3])
+        let copy=arr.slice()
+        console.log(copy)
+        let dCopy=arr;
+        console.log(dCopy)
+        arr.push(123)
+        console.log(dCopy)
+        console.log(copy)
+    </script>
+</body>
+</html>
