@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event handling</title>
+</head>
+<body>
+    <!-- <button onclick="alert('This button clicked')">Click here</button> -->
+    <button onclick="myfun()">Click here</button>
+    <input type="text" onfocus="changecolor()" id="field" onkeyup="update_text()">
+    <h1 id="heading">Heading area</h1>
+    <form action="test.html" onsubmit="form_submit(event)" >
+    <button type="submit">Submit</button></form>
+    <button id="go_lv_btn">Live btn</button>
+    <button id="remove">Remove</button>
+    <script>
+        const myfun=()=>{
+            alert('this is alert!')
+            btn_lv.removeEventListener('mouseover')
+        }
+        const changecolor=()=>{
+            document.getElementById('field').style.background='#e2e2e2'
+        }
+        const update_text=()=>{
+            let data=document.getElementById('field').value 
+            document.getElementById('heading').innerHTML=data
+        }
+        const form_submit=e=>{
+            console.log(e)
+            e.preventDefault()
+        }
+        let btn_lv=document.getElementById('go_lv_btn')
+        // btn_lv.addEventListener('click',()=>{
+        //     alert('you are live')
+        // })
+        function change()
+        {
+        document.body.style.background='gray';
+        document.body.style.color='white'
+        
+        
+        }
+        btn_lv.addEventListener('click',change)
+        function mouseCh(){
+            
+            btn_lv.style.background='aqua';
+        
+        }
+        btn_lv.addEventListener('mouseover',mouseCh)
+        let remove=document.getElementById('remove')
+        remove.addEventListener('click',()=>{
+            btn_lv.removeEventListener('mouseover',mouseCh)
+        })
+
+    </script>
+</body>
+</html>

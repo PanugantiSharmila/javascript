@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Date and Time</title>
+</head>
+
+<body>
+
+    <script>
+        let d = new Date()
+        console.log(d)
+        console.log(d.toLocaleDateString())
+        console.log(d.toLocaleTimeString())
+        console.log(d.toUTCString())
+        console.log(d.getDate())
+        console.log(`Month : ${d.getMonth()+1}`)
+        console.log(d.getFullYear())
+        console.log(d.getDay()+1)
+        console.log(d.getHours())
+        let d1=new Date('29 October 2023')
+        console.log(d1.getDay()+1)
+        console.log(d1)
+        // let d1=new Date(2023,10,21)
+        // console.log(d1)
+
+    </script>
+</body>
+
+</html>

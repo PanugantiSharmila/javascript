@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="main">
+        <!-- before -->
+        <h1 id="title">Hello world</h1>
+        <p id="hint">This is a para</p>
+        <!-- div element -->
+    </div>
+    <button onclick="addNode()">Add Node</button>
+    <script>
+        function addNode()
+        {
+            console.log('adding node')
+            let divElement=document.createElement('div')
+            console.log(divElement)
+            let textElement=document.createTextNode('Hello created')
+            divElement.appendChild(textElement)
+            let main=document.getElementById('main')
+            main.appendChild(divElement)
+            let title=document.getElementById('title')
+            main.insertBefore(divElement,title)
+            main.removeChild(title)
+            let newEle=document.createElement('h2')
+            let text=document.createTextNode('Hello h2')
+            newEle.appendChild(text)
+            let old=document.getElementById('hint')
+            main.replaceChild(newEle,old)
+
+        }
+    </script>
+</body>
+</html>

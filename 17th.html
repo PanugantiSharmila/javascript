@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1 id="title">JAvascript</h1>
+        <p id="content">
+            <span>Javascript paragraph content Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, tenetur?</span>
+        </p>
+        <h2>Last child</h2>
+        
+    </div>
+    <button onclick="btnClicked()">Click here</button>
+</body>
+<script>
+    function btnClicked()
+    {
+        let containerOb=document.getElementById('container')
+        console.log(containerOb)
+        console.log(containerOb.firstChild.nodeName)
+        console.log(containerOb.firstElementChild.nodeName)
+        let nodes=containerOb.childNodes
+        console.log(nodes)
+        for(let n of nodes)
+        {
+            console.log(n.nodeName)
+        }
+        let title=document.getElementById('title')
+        let nextS=title.nextSibling
+        console.log(nextS)
+        console.log(title.nextElementSibling.nextElementSibling)
+    }
+</script>
+</html>

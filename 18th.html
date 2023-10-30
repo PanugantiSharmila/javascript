@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Timers</h1>
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+    <script>
+        const myCode=()=>{
+            console.log('Hey JS')
+            console.log('Hru')
+        }
+        let timer;
+        const start=()=>{
+            // myCode()
+            //setTimeout(myCode,5000)
+            timer=setInterval(myCode,2000)
+            console.log(timer)
+        }
+        const stop=()=>
+        {
+            clearInterval(timer)
+        }
+    </script>
+</body>
+</html>
